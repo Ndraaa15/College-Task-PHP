@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Handling</title>
+    <style>
+      body {
+        font-family: poppins;
+      }
+
+      .container {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(192, 192, 192, 0.63);
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+
+    <script>
+      function preview() {
+        view.src = URL.createObjectURL(event.target.files[0]);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pendaftaran Lomba Web Design</h2>
+      <form
+        action="./file_handling.php"
+        method="post"
+        enctype="multipart/form-data"
+        class="form"
+      >
+        <label for="team">Nama Tim</label>
+        <input type="text" name="team" id="team" required />
+        <label for="origin">Asal Tim</label>
+        <input type="text" name="origin" id="origin" required />
+        <label for="category">Kategori</label>
+        <select name="category" id="category" required>
+          <option value="SMA & SMK">SMA/SMK</option>
+          <option value="Mahasiswa">Mahasiswa</option>
+        </select>
+        <label for="contact">Kontak</label>
+        <input type="text" name="contact" id="contact" required />
+        <label for="payment-proof">Bukti Pembayaran</label>
+        <input
+          type="file"
+          name="payment-proof"
+          id="payment-proof"
+          onchange="preview()"
+        />
+        <img id="view" src="" width="200px" />
+        <input type="submit" value="Submit" name="submit" />
+      </form>
+    </div>
+  </body>
+</html>
