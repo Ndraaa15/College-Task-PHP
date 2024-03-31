@@ -1,7 +1,45 @@
-<!-- Di file kedua (Lat3_3b.php), hitung nilai faktorial dari angka yang dimasukkan dengan membuat
-sebuah fungsi. Tampilkan nilai angka yang dimasukkan melalui form tersebut beserta nilai
-faktorialnya. Selanjutnya, buat sebuah variabel array yang berisi nilai angka yang dimasukkan,
-hasil kalkulasi nilai faktorial, NIM dan nama Anda. Simpan variabel array tersebut dalam
-variabel session. Buat sebuah link di halaman Lat3_3b.php yang mengarah ke file ketiga. -->
-
 <?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+  if (isset($_POST['submit'])) {
+    $num = $_POST['number'];
+    $result = countFactorial($num);
+    $arr = array(
+      'name' => "Gede Indra Adi Brata",
+      'nim' => "225150200111006",
+      'num' => $num,
+      'result' => $result
+    );
+    
+    $_SESSION['arr'] = $arr;
+  }
+}
+
+function countFactorial($num): int
+{
+  if ($num == 0) {
+    return 1;
+  } else {
+    return $num * countFactorial($num - 1);
+  }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Factorial</title>
+</head>
+
+<body>
+  <h3>Hasil Perhitungan Faktorial</h3>
+  <p>Angka :  <?php echo $num ?> </p>
+  <p>Hasil Faktorial :  <?php echo $result ?> </p>
+  <a href="Lat3_3c.php">Lanjutkan</a>
+</body>
+
+</html>
