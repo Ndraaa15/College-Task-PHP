@@ -1,0 +1,4 @@
+Modifikasi program pada Latihan 4, sehingga setelah user melakukan order, namun ingin meng-edit
+kembali order sebelumnya, yang ditampilkan pada input text adalah jumlah terakhir order yang
+diinginkan. Contoh semula user meng-order CD 5 buah, kemudian ingin mengubah order menjadi 10,
+maka yang ditampilkan pada input text “Lat3_4a.php” adalah 5 buah, bukan 0.

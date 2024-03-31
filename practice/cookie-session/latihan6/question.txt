@@ -1,0 +1,5 @@
+Lengkapi program pada Latihan 4 dan Latihan 5 dengan halaman user login, sehingga user yang
+boleh meng-order CD/DVD adalah user yang terdaftar. Gunakan user dan password 'admin', sebagai
+'user yang terdaftar'. Gunakan pula session untuk menyimpan state berupa user maupun password
+password. Buatlah pula fungsi untuk logout sehingga, ketika state user maupun password telah
+hilang/user telah meninggalkan website, user tidak bisa meng-order, kecuali jika telah login kembali.
