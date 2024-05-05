@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
+    <title>Events</title>
 </head>
 <body>
-    <h1>My name is {{ $name }}, I'm from {{ $location }}</h1>
+    <h1>Event : {{ $name }}</h1>
+    <h1>Location : {{ $location }}</h1>
 </body>
 </html>
