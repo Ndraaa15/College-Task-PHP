@@ -1,48 +1,99 @@
 body {
+  padding: 0 10%;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  margin: 20px;
 }
 
-.container {
-  width: 80%;
-  margin: 20px auto;
-}
-
-h1 {
-  text-align: center;
-}
-
-form {
-  margin-bottom: 20px;
-}
-
-input[type="text"],
-input[type="submit"] {
-  padding: 8px;
-  margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
+.addMhsBtn {
+  border: none;
+  letter-spacing: 2px;
+  color: white;
+  font-size: larger;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: rgb(16, 189, 82);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
-th,
-td {
+#studentTable table, td {
+  border: 1px solid #ddd;
+}
+
+#studentTable td {
+  padding: 8px 40px;
+  text-align: center;
+}
+#studentTable td:nth-last-child(-n+4) {
+  width: calc(100% / 4);
+}
+
+button.show{
+  background-color: cadetblue;
+  border: 1px solid #ccc;
+  padding: 7px 25px;
+  color: white;
+  border-radius: 3px;
+}
+
+button.edit {
+  background-color: rgb(71, 71, 172);
+  border: 1px solid #ccc;
+  padding: 7px 25px;
+  color: white;
+  border-radius: 3px;
+
+}
+button.delete {
+  background-color: red;
+  border: 1px solid #ccc;
+  padding: 7px 25px;
+  color: white;
+  border-radius: 3px;
+
+}
+
+button.show:hover, button.edit:hover, button.delete:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ddd;
+  z-index: 9;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+}
+
+.form-container {
+  max-width: 300px;
+}
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-container input {
+  width: 100%;
   padding: 8px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
+  margin-bottom: 10px;
 }
 
-th {
-  background-color: #007bff;
-  color: #fff;
+.form-container button {
+  margin-top: 10px;
 }
