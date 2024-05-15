@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     localStorage.setItem('students', JSON.stringify(students));
+    loadStudents();
     closeForm();
   };
 
